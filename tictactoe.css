@@ -1,0 +1,206 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+ 
+body{
+   background-color: black;
+}
+
+#board {
+   width: 375px;
+   padding-top: 3%;
+   margin: auto;
+}
+
+#gameBoard{
+   width: 375px;
+   display: flex;
+   flex-wrap: wrap;
+} 
+
+.box {
+   height: 125px;
+   width: 125px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #15f4ee;
+   cursor: pointer;
+   font-size: 80px;
+   font-family: 'Poppins', sans-serif;
+   text-shadow: 1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3;
+} 
+
+
+#gameTitle{
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: 10px;
+   color: #15f4ee;
+   text-shadow: 1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3;
+}
+
+#button{
+   display: flex;
+   justify-content: space-around;
+}
+
+#restartButton, #startButton {
+   width: 120px;
+   padding: 10px;
+   margin: 10px;
+   text-align: center;
+   font-size: 17px;
+   color: #15f4ee;
+   font-family: 'Poppins', sans-serif;
+   border: 3px solid #15f4ee;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   cursor: pointer;
+   border-radius: 20px;
+   transition: 1.5s;
+   text-shadow: 1px 1px 10px #0fdad3,
+                1px 1px 10px #0fdad3,
+                1px 1px 10px #0fdad3,
+                1px 1px 10px #0fdad3;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+#restartButton:hover, #startButton:hover{
+   box-shadow: 0 4px 30px 0 #15f4ee inset, 0px 4px 30px 0 #15f4ee,
+   0 4px 30px 0 #15f4ee inset, 0px 4px 30px 0 #15f4ee;
+}
+
+
+#scoreBoard {
+   padding-top: 10px;
+}
+
+#scoreBoardName {
+   margin: 10px auto;
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: 10px;
+   color: #15f4ee;
+   text-shadow: 1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3;
+}
+
+#playerScores {
+   display: flex;
+   margin: auto;
+   text-transform: uppercase;
+   font-family: 'Poppins', sans-serif;
+   color: #15f4ee;
+   text-shadow: 1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3;
+}
+
+#scores{
+   flex: 1;
+   text-align: center;
+}
+
+div.box:hover{
+   background-color: #1ef0e9;
+}
+
+.box:nth-child(1) {
+   border-right: 5px solid #54f4ff;
+   border-bottom: 5px solid#54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(2) { 
+   border-right: 5px solid #54f4ff;  
+   border-bottom: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(3) {
+   border-bottom: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(4) {
+   border-right: 5px solid #54f4ff;
+   border-bottom: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(5) {
+   border-right: 5px solid #54f4ff;
+   border-bottom: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(6) {
+   border-bottom: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(7) {
+   border-right: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+}
+
+.box:nth-child(8) {
+   border-right: 5px solid #54f4ff;
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+} 
+
+.box:nth-child(9) {
+   box-shadow: 3px 3px 30px -1px #15f4ee;
+} 
+
+
+.textMessage {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .9);
+   justify-content: center;
+   align-items: center;
+   color: #15f4ee;
+   font-size: 53px;
+   flex-direction: column;
+   text-shadow: 1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3,
+                1px 1px 20px #0fdad3;
+ }
+
+ .textMessage button {
+   font-size: 25px;
+   padding: 10px;
+   background-color: black;
+   color: #0fcfc9;
+   border: 2px solid #15f4ee;
+   border-radius: 15px;
+   cursor: pointer;
+   outline: none;
+ }
+
+ .textMessage button:hover {
+   box-shadow: 0 4px 30px 0 #15f4ee inset, 0px 4px 30px 0 #15f4ee,
+   0 4px 30px 0 #15f4ee inset, 0px 4px 30px 0 #15f4ee;
+ }
+
+ .textMessage.show {
+   display: flex;
+ }
